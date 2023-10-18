@@ -30,7 +30,7 @@ app.use("/api/users",userRoute)
 app.use("/api/notes",noteRoute)
 
 
-app.listen(8000,()=>{
+app.listen(3000,()=>{
     connectDB()
-    console.log("app is running on port 8000")
+    console.log("app is running on port 3000")
 })
