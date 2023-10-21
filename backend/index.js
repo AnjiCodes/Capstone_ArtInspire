@@ -1,9 +1,20 @@
+// import express, { json } from 'express'
+// import { default as mongoose } from 'mongoose'
+// import { config } from 'dotenv'
+// import cors from 'cors'
+// import path from 'path'
+// import cookieParser from 'cookie-parser'
+// import authRoute from './routes/auth'
+// import userRoute from './routes/users'
+// import noteRoute from './routes/notes'
+
+
 const express=require('express')
-const { default: mongoose } = require('mongoose')
 const app=express()
+const mongoose=require('mongoose')
 const dotenv=require('dotenv')
 const cors=require('cors')
-const path=require("path")
+// const path=require("path")
 const cookieParser=require('cookie-parser')
 const authRoute=require('./routes/auth')
 const userRoute=require('./routes/users')
@@ -16,7 +27,7 @@ const connectDB=async()=>{
         console.log("database is connected successfully!")
     }
     catch(err){
-
+        console.log("DB error", err)
     }
 }
 
@@ -24,7 +35,7 @@ const connectDB=async()=>{
 dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin:"http://localhost:5183"}))
+app.use(cors({origin:"http://localhost:5173",credentials:true}))
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/notes",noteRoute)

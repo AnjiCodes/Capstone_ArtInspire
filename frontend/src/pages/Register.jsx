@@ -28,7 +28,6 @@ const Register = () => {
   }
 
 
-
     return (
       <>
       <div className="w-full flex justify-center items-center h-[80vh]">
