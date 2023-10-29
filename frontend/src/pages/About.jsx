@@ -7,10 +7,12 @@ const About = () => {
             <div>
               <img className="w-[400px] h-[400px]" src="/images/Homepageimage.png" />
             </div>
-            <div className="flex flex-col items-center justify-center">
-              <h1 className="w-96 h-48 font-extralight text-black text-8xl tracking-widest">ART INSPIRE</h1>
-              <h1 className="pt-3 w-96 h-24 text-pink text-2xl">SAY GOODBYE TO YOUR CREATIVE BLOCK!</h1>
-              <div className="pr-72"><h1 className="text-xl inline-block px-5 py-3 text-black text-center tracking-wide bg-white hover:bg-pink hover:text-white rounded-lg transition duration-200"><Link to="/">JOIN NOW</Link></h1></div>
+            <div className="pb-24 flex flex-col items-center justify-center">
+              <h1 className="w-96 h-24 text-pink text-2xl">✨ABOUT ARTINSPIRE✨ < br/><span className=" text-black text-xl">
+              At ArtInspire, we are on a mission to empower artists, 
+              whether you're a painter, writer, scribbler, or sketcher, with the tools and personal
+               space you need to break through creative challenges. We believe that creativity should 
+               flow freely, and we're here to help you make it happen.</span></h1>
             </div>
           </div>
         </div>

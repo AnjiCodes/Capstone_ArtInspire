@@ -17,8 +17,7 @@ const Login = () => {
     try{
       const res=await axios.post(URL+"/api/auth/login",{email,password},{withCredentials:true})
       setUser(res.data)
-      navigate("/MySpace")
-
+      navigate("/notes")
     }
     catch(err){
       setError(true)
