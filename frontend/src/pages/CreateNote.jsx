@@ -47,7 +47,7 @@ const CreateNote = () => {
             <form className="w-full flex-flex-col space-y-4 md:space-y-8">
                 <input onChange={(e)=>setTitle(e.target.value)}  value={title}  type="text" placeholder="Enter Note Title" className="px-4 py-2 outline-none"></input>
                 <div className='flex flex-col space-y-4 '>
-                    <textarea onChange={(e)=>setDesc(e.target.value)} rows={10} cols={10}   value={desc}  className="px-4 py-2 border-[1px] outline-none" placeholder="Enter Note Description"> </textarea>
+                    <textarea onChange={(e)=>setDesc(e.target.value)} rows={10} cols={10}   value={desc}  className="px-4 py-2 border-[1px] caret-pink outline-none" placeholder="Enter Note Description"> </textarea>
                     <button onClick={handleCreate} className="bg-pink w-full md:w-[20%] mx-auto rounded-lg  text-white gont-semibold px-4 py-2 text-lg">Create</button>
                     <button className="bg-pink w-full md:w-[20%] mx-auto text-white gont-semibold rounded-lg  px-4 py-2 text-lg"><Link to="/notes">Go Back</Link></button>
                 </div>

@@ -40,9 +40,9 @@ const [notes,setNotes]=useState([])
   </Link>
 ))}
 
-      <div className="flex flex-col space-y-2">
+      <div className="flex pt-6 flex-col space-y-2">
       <button className="bg-pink w-full md:w-[20%] mx-auto text-white rounded-lg  gont-semibold px-4 py-2 text-lg"><Link to="/write"> Create Note</Link></button>
-      <button className="sbg-pink w-full md:w-[20%] mx-auto text-white rounded-lg  gont-semibold px-4 py-2 text-lg"><Link to="/MySpace">Go Back</Link></button>
+      <button className="sbg-pink w-full md:w-[20%] mx-auto text-white rounded-lg  gont-semibold px-4 py-2 text-lg"><Link to="/notes">Go Back</Link></button>
       </div>
     </div>
     </>
