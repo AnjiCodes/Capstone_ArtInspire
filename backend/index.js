@@ -31,6 +31,15 @@ const connectDB=async()=>{
     }
 }
 
+const corsOpts = {
+    origin: '*',
+    credentials: true,
+    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
+};
+
+app.use(cors(corsOpts));
 //http://localhost:5173
 
 //middlewares
