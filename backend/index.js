@@ -46,7 +46,10 @@ app.use(cors(corsOpts));
 dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin:"https://65405c4ab9c208386a03cbcd--musical-zuccutto-16466e.netlify.app",credentials:true}))
+app.use(cors({
+    origin: '*',
+  }));
+// app.use(cors({origin:"https://65405c4ab9c208386a03cbcd--musical-zuccutto-16466e.netlify.app",credentials:true}))
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/notes",noteRoute)
