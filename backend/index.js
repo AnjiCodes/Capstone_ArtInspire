@@ -31,15 +31,23 @@ const connectDB=async()=>{
     }
 }
 
+//http://localhost:5173
+
 //middlewares
 dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin:"https://65405881c9cac13a3342883e--musical-zuccutto-16466e.netlify.app/",credentials:true}))
+app.use(cors({origin:"http://localhost:5173",credentials:true}))
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/notes",noteRoute)
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://65405881c9cac13a3342883e--musical-zuccutto-16466e.netlify.app');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
 
 app.listen(3000,()=>{
     connectDB()
