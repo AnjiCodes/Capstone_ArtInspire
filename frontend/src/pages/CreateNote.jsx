@@ -30,7 +30,8 @@ const CreateNote = () => {
 
         //note upload
         try{
-            const res=await axios.post(URL+"/api/notes/create",note,{withCredentials:true})
+            const res=await axios.post(URL+"/api/notes/create",note)
+            // const res=await axios.post(URL+"/api/notes/create",note,{withCredentials:true})
             navigate("/notes/note/"+res.data._id)
             // console.log(res.data)
             
