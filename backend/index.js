@@ -23,7 +23,7 @@ const noteRoute=require('./routes/notes')
 // database
 const connectDB=async()=>{
     try{
-        await mongoose.connect("mongodb+srv://anjalimahida25:artinspire@cluster0.pbbsyei.mongodb.net/?retryWrites=true&w=majority")
+        await mongoose.connect("mongodb+srv://anjalimahida25:artinspire@cluster0.pbbsyei.mongodb.net/testretryWrites=true&w=majority")
         console.log("database is connected successfully!")
     }
     catch(err){
