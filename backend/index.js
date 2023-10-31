@@ -35,7 +35,7 @@ const connectDB=async()=>{
 dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin:"http://localhost:5173",credentials:true}))
+app.use(cors({origin:"https://65405881c9cac13a3342883e--musical-zuccutto-16466e.netlify.app/",credentials:true}))
 app.use("/api/auth",authRoute)
 app.use("/api/users",userRoute)
 app.use("/api/notes",noteRoute)
