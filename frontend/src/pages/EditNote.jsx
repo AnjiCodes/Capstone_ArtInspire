@@ -37,8 +37,8 @@ const EditNote = () => {
 
         //note upload
         try{
-            const res=await axios.put(URL+"/api/notes/"+noteId,note)
-            // const res=await axios.put(URL+"/api/notes/"+noteId,note,{withCredentials:true})
+            // const res=await axios.put(URL+"/api/notes/"+noteId,note)
+            const res=await axios.put(URL+"/api/notes/"+noteId,note,{withCredentials:true})
             navigate("/notes/note/"+res.data._id)
             // console.log(res.data)
             

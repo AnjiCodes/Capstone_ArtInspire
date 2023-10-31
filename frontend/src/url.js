@@ -1,1 +1,1 @@
-export const URL= "https://mern-art-inspire-app.onrender.com"
+export const URL= "http://localhost:3000"
